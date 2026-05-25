@@ -1,0 +1,56 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(241, 176, 195);
+    font-family: 'Times New Roman', Times, serif;
+}
+#accordian
+{
+    margin: 100px auto;
+    width: 600px;
+
+
+}
+#accordian li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+}
+#accordian li label{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+#accordian li label span{
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: rgb(11, 11, 51);
+}
+#accordian label + input[type="radio"] /* This line is used for removing the radio button from the html or hidding it for the whiletime  */
+{
+    display: none;
+}
+#accordian .content
+{
+    padding: 0 10px;
+    line-height: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+}
+#accordian label + input[type="radio"]:checked + .content
+{
+    max-height: 400px;
+}
